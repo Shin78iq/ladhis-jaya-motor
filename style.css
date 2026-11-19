@@ -1,36 +1,52 @@
-/* index.html */
-body {
-    background-color: rgb(29, 29, 32);
-}
 
-body {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-
+/* ===== DASAR ngaruh ke semua file buat ===== */
 * {
     margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: rgb(29, 29, 32);
+    color: rgb(211, 211, 211);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.7;
 }
 
 
-.menu {
+/* ===== NAVBAR / MENU ===== */
+.logo {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    min-height: 44px;
+    color: #ffffffeb;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #ff2020;
+    margin-left: 0.3em;
+}
+
+.menu {
     list-style: none;
-    padding: 20px 40px;
-    margin: 0;
-    text-align: center;
-    
+    padding: 0;
 }
 
 .menu li a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     color: rgb(211, 211, 211);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -38,80 +54,74 @@ body {
     color: #ff1616;
 }
 
-.Banner {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+/* Penanda halaman yang sedang dibuka */
+.menu li a.aktif {
+    color: #ff1616;
 }
+
+
+/* ===== INDEX.HTML ===== */
 .Banner img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 16px;
 }
 
-
-
 .brand {
-    font-size: 30px;
-    text-align: center  
+    text-align: center;
+}
+
+.brand h1 {
+    font-size: 36px;
+    line-height: 1.2;
 }
 
 .Ladhis {
     color: #ffffffda;
 }
+
 .jaya {
     color: #ff2020;
-    
 }
 
 .index h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 22px;
     color: #ffffffeb;
+    margin: 15px 0;
 }
 
 .keunggulan {
     color: azure;
     font-size: 15px;
     text-align: center;
-    margin-bottom: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-/* index.html */
-
-/* TENTANG.HTML */
-body.tentang {
-    background-color: rgb(29, 29, 32);
-    color: rgb(211, 211, 211);
-    font-weight: 400;
-    line-height: 1.7;
 }
 
-/* Hero */
-.tentang .hero {
+
+/* ===== HERO (tentang & layanan) ===== */
+.hero {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 540px;
+    min-height: 260px;
     text-align: center;
     color: #ffffffeb;
     overflow: hidden;
     background: linear-gradient(135deg, rgb(29, 29, 32), #7a0f0f);
 }
 
-.tentang .hero img {
+.hero img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 270%;
     object-fit: cover;
-    
 }
 
-.tentang .hero::after {
+.hero::after {
     content: "";
     position: absolute;
     top: 0;
@@ -122,105 +132,97 @@ body.tentang {
     z-index: 1;
 }
 
-.tentang .hero-teks {
+.hero .hero-teks {
     position: relative;
     z-index: 2;
-    padding: 60px 20px;
+    padding: 40px 16px;
 }
 
-.tentang .hero h1 {
-    font-size: 52px;
+.hero h1 {
+    font-size: 34px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.tentang .merah {
+.merah {
     color: #ff2020;
 }
 
-.tentang .hero p {
-    font-size: 20px;
-    max-width: 600px;
+.hero p {
+    font-size: 16px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
-/* Konten */
-.tentang .konten {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px 20px 30px 20px;
+
+/* ===== KONTEN (tentang & layanan) ===== */
+.konten {
+    padding: 30px 0 20px 0;
 }
 
-.tentang h2 {
+.konten h2 {
     color: #ffffffeb;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 15px;
 }
 
-.tentang h3 {
+.konten h3 {
     color: #ffffffeb;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.tentang .section-judul {
+.konten .section-judul {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-/* Card */
-.tentang .card {
+/* Card (tentang) */
+.card {
     background-color: rgb(40, 40, 45);
     border-left: 4px solid #ff2020;
     border-radius: 16px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    padding: 30px;
+    padding: 20px;
     margin-bottom: 25px;
     transition: 0.3s;
 }
 
-.tentang .card:hover {
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 24px rgba(255, 32, 32, 0.2);
 }
 
-.tentang .card p {
+.card p {
     margin-bottom: 15px;
 }
 
-.tentang .card p:last-child {
+.card p:last-child {
     margin-bottom: 0;
 }
 
-.tentang .tema {
+.tema {
     color: #ff2020;
     font-weight: 700;
 }
 
-.tentang .card ul {
+.card ul {
     padding-left: 22px;
 }
 
-.tentang .card li {
+.card li {
     margin-bottom: 12px;
 }
 
-.tentang .card li::marker {
+.card li::marker {
     color: #ff2020;
 }
 
-/* Mengapa memilih kami */
-.tentang .keunggulan-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.tentang .keunggulan-card {
+/* Kartu "Mengapa memilih kami" */
+.keunggulan-card {
     background-color: rgb(40, 40, 45);
     border-top: 3px solid #ff2020;
     border-radius: 16px;
@@ -230,203 +232,26 @@ body.tentang {
     transition: 0.3s;
 }
 
-.tentang .keunggulan-card:hover {
+.keunggulan-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 24px rgba(255, 32, 32, 0.2);
 }
 
-.tentang .ikon {
+.ikon {
     display: block;
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.tentang .keunggulan-card h3 {
-    font-size: 17px;
+.keunggulan-grid .keunggulan-card h3 {
+    font-size: 15px;
     margin-bottom: 0;
 }
 
-/* Tombol kembali */
-.tentang .tombol-wrap {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.tombolkembali {
-    display: inline-block;
-    padding: 12px 32px;
-    background-color: #ff2020;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.tombolkembali:hover {
-    background-color: #b81414;
-    transform: translateY(-2px);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .tentang .hero {
-        min-height: 260px;
-    }
-
-    .tentang .hero h1 {
-        font-size: 34px;
-    }
-
-    .tentang .hero p {
-        font-size: 16px;
-    }
-
-    .tentang .konten {
-        padding: 30px 15px 20px 15px;
-    }
-
-    .tentang h2 {
-        font-size: 24px;
-    }
-
-    .tentang .card {
-        padding: 20px;
-    }
-
-    .tentang .keunggulan-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .tentang .keunggulan-card h3 {
-        font-size: 15px;
-    }
-}
-/* Footer */
-.tentang .footer-tentang {
-    border-top: 1px solid rgb(60, 60, 65);
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding: 30px 20px;
-    text-align: center;
-    color: rgb(211, 211, 211);
-}
-
-.tentang .footer-tentang strong {
-    color: #ffffffeb;
-}
-/* TENTANG.HTML END */
-
-
-/* LAYANAN PRODUK */
-body.layanan {
-    background-color: rgb(29, 29, 32);
-    color: rgb(211, 211, 211);
-    font-weight: 400;
-    line-height: 1.7;
-}
-
-/* Hero */
-.layanan .hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 540px;
-    text-align: center;
-    color: #ffffffeb;
-    overflow: hidden;
-    background: linear-gradient(135deg, rgb(29, 29, 32), #7a0f0f);
-}
-
-.layanan .hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 270%;
-    object-fit: cover;
-}
-
-.layanan .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(29, 29, 32, 0.88), rgba(122, 15, 15, 0.7));
-    z-index: 1;
-}
-
-.layanan .hero-teks {
-    position: relative;
-    z-index: 2;
-    padding: 60px 20px;
-}
-
-.layanan .hero h1 {
-    font-size: 52px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.layanan .merah {
-    color: #ff2020;
-}
-
-.layanan .hero p {
-    font-size: 20px;
-    max-width: 650px;
-    margin: 0 auto;
-}
-/* Footer */
-.index .footer-index {
-    border-top: 1px solid rgb(60, 60, 65);
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding: 30px 20px;
-    text-align: center;
-    color: rgb(211, 211, 211);
-}
-
-.index .footer-index strong {
-    color: #ffffffeb;
-}
-
-/* Konten */
-.layanan .konten {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 50px 20px 30px 20px;
-}
-
-.layanan h2 {
-    color: #ffffffeb;
-    font-weight: 700;
-}
-
-.layanan .section-judul {
-    text-align: center;
-    font-size: 28px;
-    margin-top: 60px;
-    margin-bottom: 25px;
-}
-
-/* Card layanan */
-.layanan .layanan-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.layanan .layanan-card {
+/* Kartu layanan */
+.layanan-card {
     display: flex;
     flex-direction: column;
-    width: calc((100% - 50px) / 3);
     background-color: rgb(40, 40, 45);
     border-top: 3px solid #ff2020;
     border-radius: 16px;
@@ -435,53 +260,53 @@ body.layanan {
     transition: 0.3s;
 }
 
-.layanan .layanan-card:hover {
+.layanan-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 26px rgba(255, 32, 32, 0.22);
 }
 
-.layanan .card-gambar {
+.card-gambar {
     height: 200px;
     background-color: #ffffff;
     overflow: hidden;
 }
 
-.layanan .card-gambar img {
+.card-gambar img {
     display: block;
     width: 100%;
     height: 100%;
     padding: 10px;
-    box-sizing: border-box;
     object-fit: contain;
     transition: 0.4s;
 }
 
-.layanan .layanan-card:hover .card-gambar img {
+.layanan-card:hover .card-gambar img {
     transform: scale(1.08);
 }
 
-.layanan .card-isi {
+.card-isi {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     padding: 22px;
 }
 
-.layanan .card-isi h2 {
-    font-size: 22px;
+.layanan-card .card-isi h2 {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.layanan .card-isi p {
+.card-isi p {
     flex-grow: 1;
-    margin-bottom: 20px;
 }
 
 /* Tombol */
-.layanan .btn-card,
-.layanan .btn-utama,
-.layanan .btn-garis {
-    display: inline-block;
+.btn-utama,
+.btn-garis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     padding: 10px 24px;
     border: 2px solid #ff2020;
     border-radius: 10px;
@@ -492,205 +317,66 @@ body.layanan {
     transition: 0.3s;
 }
 
-.layanan .btn-card,
-.layanan .btn-garis {
+.btn-garis {
     color: #ff2020;
 }
 
-.layanan .btn-utama {
+.btn-garis:hover {
     background-color: #ff2020;
     color: #ffffff;
 }
 
-.layanan .btn-card:hover,
-.layanan .btn-garis:hover {
+.btn-utama {
     background-color: #ff2020;
     color: #ffffff;
 }
 
-.layanan .btn-utama:hover {
+.btn-utama:hover {
     background-color: #b81414;
     border-color: #b81414;
 }
 
-/* Mengapa memilih kami */
-.layanan .keunggulan-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.layanan .keunggulan-card {
-    background-color: rgb(40, 40, 45);
-    border-top: 3px solid #ff2020;
-    border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    padding: 25px 15px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.layanan .keunggulan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(255, 32, 32, 0.2);
-}
-
-.layanan .ikon {
-    display: block;
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.layanan .keunggulan-card h3 {
-    color: #ffffffeb;
-    font-size: 17px;
-    font-weight: 700;
-}
-
 /* Call to action */
-.layanan .cta {
+.cta {
     background-color: rgb(40, 40, 45);
     border-left: 4px solid #ff2020;
     border-radius: 16px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    padding: 40px 25px;
-    margin-top: 60px;
-    text-align: center;
-}
-
-.layanan .cta h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.layanan .cta-tombol {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Tombol kembali */
-.layanan .tombol-wrap {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.tombol-kembali-layanan {
-    display: inline-block;
-    padding: 12px 32px;
-    background-color: #ff2020;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.tombol-kembali-layanan:hover {
-    background-color: #b81414;
-    transform: translateY(-2px);
-}
-
-/* Footer */
-.layanan .footer-layanan {
-    border-top: 1px solid rgb(60, 60, 65);
-    margin-top: 40px;
-    margin-bottom: 0;
     padding: 30px 20px;
-    text-align: center;
-    color: rgb(211, 211, 211);
-}
-
-.layanan .footer-layanan strong {
-    color: #ffffffeb;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-    .layanan .layanan-card {
-        width: calc((100% - 25px) / 2);
-    }
-
-    .layanan .keunggulan-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .layanan .hero h1 {
-        font-size: 42px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .layanan .hero {
-        min-height: 260px;
-    }
-
-    .layanan .hero h1 {
-        font-size: 34px;
-    }
-
-    .layanan .hero p {
-        font-size: 16px;
-    }
-
-    .layanan .konten {
-        padding: 30px 15px 20px 15px;
-    }
-
-    .layanan .layanan-card {
-        width: 100%;
-    }
-
-    .layanan .section-judul,
-    .layanan .cta h2 {
-        font-size: 24px;
-    }
-
-    .layanan .keunggulan-grid {
-        gap: 15px;
-    }
-
-    .layanan .keunggulan-card h3 {
-        font-size: 15px;
-    }
-}
-/* LAYANAN PRODUK */
-
-
-/* GALERI.HTML */
-.galeri {
-    color: rgb(211, 211, 211);
     margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 40px;
+    text-align: center;
 }
 
-.galeri h1 {
+.cta h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+/* ===== GALERI & KONTAK (halaman) ===== */
+.halaman {
+    padding: 30px 0 10px 0;
+}
+
+.halaman h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 32px;
     color: #ffffffeb;
     margin-bottom: 20px;
+}
+
+.galeri-intro,
+.kontak-intro {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .galeri-intro {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.galeri-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .galeri-item {
-    width: 300px;
     text-align: center;
     transition: 0.3s;
 }
@@ -701,6 +387,9 @@ body.layanan {
 
 .galeri-item img {
     display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
@@ -710,8 +399,6 @@ body.layanan {
 .galeri-item:hover img {
     box-shadow: 0 10px 24px rgba(255, 32, 32, 0.2);
 }
-
-
 
 .galeri-item h3 {
     color: #ff2020;
@@ -725,7 +412,7 @@ body.layanan {
 }
 
 .testimoni {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .galeri blockquote {
@@ -749,7 +436,7 @@ body.layanan {
 }
 
 .alasan {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .alasan ul {
@@ -758,69 +445,17 @@ body.layanan {
     line-height: 1.8;
 }
 
-.tombolkembali-galeri {
-    display: inline-block;
-    padding: 12px 32px;
-    background-color: #ff2020;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.tombolkembali:hover {
-    background-color: #b81414;
-    transform: translateY(-2px);
-}
-/* Footer */
-.galeri .footer-galeri {
-    border-top: 1px solid rgb(60, 60, 65);
-    margin-top: 40px;
-    margin-bottom: 0;
-    padding: 30px 20px;
-    text-align: center;
-    color: rgb(211, 211, 211);
-}
-
-.galeri .footer-galeri strong {
-    color: #ffffffeb;
-}
-/* GALERI.HTML */
-
-
-/* KONTAK.HTML */
-.kontak {
-    color: rgb(211, 211, 211);
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 40px;
-}
-
-.kontak h1 {
-    text-align: center;
-    font-size: 50px;
-    color: #ffffffeb;
-    margin-bottom: 20px;
-}
-
-.kontak-intro {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.info-kontak {
+/* Kontak */
+.info-kontak,
+.form-kontak {
     background-color: rgb(40, 40, 45);
     border-left: 4px solid #ff2020;
     border-radius: 10px;
-    padding: 20px 30px;
-    max-width: 500px;
-    margin: 0 auto 40px auto;
+    padding: 20px;
 }
 
-.info-kontak h2 {
+.info-kontak h2,
+.form-kontak h2 {
     color: #ffffffeb;
     margin-bottom: 15px;
 }
@@ -835,38 +470,189 @@ body.layanan {
     padding-left: 20px;
 }
 
-.tombolkembali-kontak {
-    display: inline-block;
-    padding: 12px 32px;
+.form-kontak label {
+    display: block;
+    margin-bottom: 4px;
+    color: #ffffffeb;
+    font-weight: 500;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    background-color: rgb(29, 29, 32);
+    color: rgb(211, 211, 211);
+    border: 1px solid rgb(80, 80, 85);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-kontak input:focus,
+.form-kontak textarea:focus {
+    outline: 2px solid #ff2020;
+    border-color: #ff2020;
+}
+
+.form-kontak textarea {
+    resize: vertical;
+}
+
+.form-kontak button {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 24px;
     background-color: #ff2020;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
+    border: none;
     border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.tombolkembali:hover {
+.form-kontak button:hover {
     background-color: #b81414;
-    transform: translateY(-2px);
 }
-/* Footer */
-.kontak .footer-kontak {
+
+
+/* ===== FOOTER ===== */
+.site-footer {
     border-top: 1px solid rgb(60, 60, 65);
     margin-top: 40px;
-    margin-bottom: 0;
-    padding: 30px 20px;
-    text-align: center;
+    padding: 30px 0 20px 0;
     color: rgb(211, 211, 211);
 }
 
-.kontak .footer-kontak strong {
+.site-footer strong {
     color: #ffffffeb;
 }
-/* KONTAK.HTML */
 
-/* BACK TO TOP */
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer a {
+    display: inline-block;
+    padding: 6px 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ff2020;
+}
+
+.footer-copy {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgb(60, 60, 65);
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ===== LAYOUT ===== */
+/* Pembungkus isi halaman */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.tentang .konten .container {
+    max-width: 900px;
+}
+
+/* Navbar: Flexbox + sticky (header menempel di atas saat digulir) */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(29, 29, 32);
+    border-bottom: 1px solid rgb(60, 60, 65);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 16px;
+}
+
+.site-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 16px;
+    list-style: none;
+}
+
+/* Hero index: mobile = tersusun ke bawah */
+#hero {
+    padding: 24px 0 10px 0;
+}
+
+#hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Grid kartu layanan: mobile 1 kolom */
+.layanan-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+/* Grid "Mengapa memilih kami": mobile 2 kolom */
+.keunggulan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.layanan .keunggulan-grid {
+    margin-bottom: 0;
+}
+
+/* CTA tombol */
+.cta-tombol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Grid galeri */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+
+
+/* Footer: mobile 1 kolom */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+}
+
+/* Tombol "Ke Atas" (positioning: fixed) */
+/* BACK TO TOP */   
 .back-to-top {
     display: flex;
     align-items: center;
@@ -896,31 +682,180 @@ body.layanan {
 }
 /* BACK TO TOP */
 
-/* MENU HEADER */
-/* Menu atas dasarnya pakai .menu yang sudah ada (dari index). Blok ini cuma tambahan. */
-
-/* Penanda halaman yang sedang dibuka */
-.menu li a.aktif {
-    color: #ff1616;
+.back-to-top .panah {
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: 4px;
 }
 
-/* Halaman galeri & kontak punya margin body, jadi menu ditarik supaya posisinya sama kayak halaman lain */
-.galeri .menu,
-.kontak .menu {
-    margin: -40px -40px 30px -40px;
+.back-to-top:hover {
+    background-color: #b81414;
+    transform: translateY(-3px);
 }
 
-/* Mobile (tidak mempengaruhi index) */
-@media (max-width: 600px) {
-    body:not(.index) .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 18px;
-        padding: 15px 20px;
+
+/* ===== RESPONSIVE ===== */
+/* Tablet ke atas */
+@media (min-width: 768px) {
+    .logo {
+        font-size: 20px;
     }
 
-    body:not(.index) .menu li a {
+    .menu li a {
+        font-size: 18px;
+    }
+
+    .site-header nav ul {
+        gap: 0 24px;
+    }
+
+    /* Index: hero dua kolom (teks kiri, gambar kanan) */
+    #hero {
+        padding: 50px 0 20px 0;
+    }
+
+    #hero .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+
+    #hero .hero-teks,
+    #hero .Banner {
+        flex: 1;
+    }
+
+    .brand,
+    .index h2,
+    .keunggulan {
+        text-align: left;
+    }
+
+    .brand h1 {
+        font-size: 48px;
+    }
+
+    .index h2 {
+        font-size: 28px;
+    }
+
+    .keunggulan {
         font-size: 16px;
     }
+
+    /* Hero tentang & layanan */
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero .hero-teks {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    /* Konten */
+    .konten {
+        padding: 50px 0 30px 0;
+    }
+
+    .konten h2 {
+        font-size: 28px;
+    }
+
+    .konten h3 {
+        font-size: 22px;
+    }
+
+    .konten .section-judul {
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .layanan-card .card-isi h2 {
+        font-size: 22px;
+    }
+
+    .cta {
+        padding: 40px 25px;
+        margin-top: 60px;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    .keunggulan-grid {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .keunggulan-grid .keunggulan-card h3 {
+        font-size: 17px;
+    }
+
+    .layanan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Galeri & kontak */
+    .halaman {
+        padding: 50px 0 20px 0;
+    }
+
+    .halaman h1 {
+        font-size: 44px;
+    }
+
+
+    .info-kontak,
+    .form-kontak {
+        padding: 20px 30px;
+    }
+
+    /* Footer 3 kolom */
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
 }
-/* MENU HEADER */
+
+/* Laptop / desktop */
+@media (min-width: 1024px) {
+    .brand h1 {
+        font-size: 60px;
+    }
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .halaman h1 {
+        font-size: 50px;
+    }
+
+    .layanan-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .keunggulan-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

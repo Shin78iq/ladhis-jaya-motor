@@ -4,44 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri | Ladhis Jaya Motor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="Foto/astolfo.noB.png" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="galeri">
-      <nav>
-        <ul class="menu">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="tentang.html">Tentang kami</a></li>
-            <li><a href="layanan_produk.html">Layanan produk</a></li>
-            <li><a href="galeri.html" class="aktif">Galeri</a></li>
-            <li><a href="kontak.html">kontak</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Ladhis <span>Jaya Motor</span></a>
+            <nav>
+                <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang kami</a></li>
+                <li><a href="layanan_produk.html">Layanan produk</a></li>
+                <li><a href="galeri.html" class="aktif">Galeri</a></li>
+                <li><a href="kontak.html">kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="halaman">
+        <div class="container">
     <h1>Galeri</h1>
     <h2 class="galeri-intro">Halaman ini berisi dokumentasi hasil pekerjaan kami dan testimoni dari para pelanggan Ladhis Jaya Motor.</h2>
 
     <div class="galeri-grid">
         <div class="galeri-item">
-            <img src="Foto/vario.jpeg" alt="Honda Vario setelah servis" height="500" width="300">
+            <img src="Foto/vario.jpg" alt="Honda Vario setelah servis" height="500" width="300">
             <h3>Honda Vario</h3>
             <p>Servis rutin dan ganti oli, mesin jadi halus kembali.</p>
         </div>
 
          <div class="galeri-item">
-            <img src="Foto/cbr.jpeg" alt="Honda CBR150R setelah dicuci"  height="500"     width="300">
+            <img src="Foto/cbr.jpg" alt="Honda CBR150R setelah dicuci"  height="500"     width="300">
             <h3>Honda CBR150R</h3>
             <p>Cuci bersih total dan detailing body sport.</p>
         </div>
 
         <div class="galeri-item">
-            <img src="Foto/Ninfi.jpeg" alt="Kawasaki Ninja 250 new setelah dicuci"  height="520" width="300">
+            <img src="Foto/Ninfi.jpg" alt="Kawasaki Ninja 250 new setelah dicuci"  height="520" width="300">
             <h3>Kawasaki Ninja 250 new</h3>
             <p>Cuci motor premium.</p>
         </div>
 
         <div class="galeri-item">
-            <img src="Foto/R6.jpeg" alt="Yamaha R6 setelah servis kelistrikan"  height="500" width="300">
+            <img src="Foto/R6.jpg" alt="Yamaha R6 setelah servis kelistrikan"  height="500" width="300">
             <h3>Yamaha R6</h3>
             <p>Perbaikan kelistrikan, polish dan detailing body .</p>
         </div>
@@ -99,17 +109,39 @@
             <li>Peralatan modern</li>
         </ul>
     </div>
-   <!--buat bikin back to top| class="back-to-top" itu harus klo mw ganti namanya 
-   ganti juga css nya yang back to top :3-->
-    <body class="galeri" id="atas">
-        <a href="#atas" class="back-to-top">
-            <span class="panah" aria-hidden="true"></span>
-            back to top
-        </a>
- <footer class="footer-galeri">
-        <p><strong>Ladhis Jaya Motor</strong></p>
-        <p>© 2026</p>
-        <p>Servis Berkualitas, Kepuasan Terjamin</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <p><strong>Ladhis Jaya Motor</strong></p>
+                    <p>Servis Berkualitas, Kepuasan Terjamin</p>
+                    <p>Jl. Mangga</p>
+                </div>
+                <div>
+                    <p><strong>Halaman</strong></p>
+                    <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang kami</a></li>
+                    <li><a href="layanan_produk.html">Layanan produk</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Jam Operasional</strong></p>
+                    <p>Senin–Jumat: 09.30–19.00</p>
+                    <p>Sabtu–Minggu: 10.30–17.00</p>
+                </div>
+            </div>
+        </div>
     </footer>
+   <a href="#" class="back-to-top">
+        <span class="panah" aria-hidden="true"></span>
+        Ke Atas
+    </a>
+    <p class="footer-copy">© 2026 Ladhis Jaya Motor</p>
 </body>
 </html>
